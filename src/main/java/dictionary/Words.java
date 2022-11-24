@@ -1,9 +1,9 @@
 package dictionary;
 
 import java.io.File;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
-import java.util.HashMap;
 
 public class Words
 {
@@ -22,14 +22,12 @@ public class Words
                 if (entry.length == 1)
                 {
                     words.put(entry[0], "");
-                }
-                else
+                } else
                 {
                     words.put(entry[0], entry[1]);
                 }
             }
-        }
-        catch (Exception e)
+        } catch (Exception e)
         {
             e.printStackTrace();
         }
@@ -43,8 +41,7 @@ public class Words
             if (entry.length == 1)
             {
                 words.put(entry[0], "");
-            }
-            else
+            } else
             {
                 words.put(entry[0], entry[1]);
             }

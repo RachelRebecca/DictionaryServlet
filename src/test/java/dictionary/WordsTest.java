@@ -13,6 +13,7 @@ class WordsTest
 
         assertTrue(sd.isWord("HAPPY"));
     }
+
     @Test
     void isWord_Zoogeographical()
     {
@@ -37,7 +38,6 @@ class WordsTest
         assertFalse(sd.isWord("hapy"));
     }
 
-
     @Test
     void getDefinition_Happy()
     {
@@ -53,6 +53,7 @@ class WordsTest
 
         assertEquals("", sd.getDefinition("zoogeographical"));
     }
+
     @Test
     void getDefinition_Fragment()
     {
@@ -60,6 +61,7 @@ class WordsTest
 
         assertNull(sd.getDefinition("happ"));
     }
+
     @Test
     void getDefinition_NotFragment()
     {
