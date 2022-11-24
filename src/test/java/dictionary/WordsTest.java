@@ -43,7 +43,8 @@ class WordsTest
     {
         Words sd = new Words();
 
-        assertEquals("marked by joy [adj -PIER, -PIEST] : HAPPILY [adv]", sd.getDefinition("HAPPY"));
+        assertEquals("marked by joy [adj -PIER, -PIEST] : HAPPILY [adv]",
+                sd.getDefinition("HAPPY"));
     }
 
     @Test
