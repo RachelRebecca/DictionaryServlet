@@ -4,19 +4,19 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class DictionaryTest
+class WordsTest
 {
     @Test
     void isWord_HAPPY()
     {
-        Dictionary sd = new Dictionary();
+        Words sd = new Words();
 
         assertTrue(sd.isWord("HAPPY"));
     }
     @Test
     void isWord_ZOOGEOGRAPHICAL()
     {
-        Dictionary sd = new Dictionary();
+        Words sd = new Words();
 
         assertTrue(sd.isWord("zoogeographical"));
     }
@@ -24,7 +24,7 @@ class DictionaryTest
     @Test
     void isWord_FRAGMENT()
     {
-        Dictionary sd = new Dictionary();
+        Words sd = new Words();
 
         assertFalse(sd.isWord("happ"));
     }
@@ -32,7 +32,7 @@ class DictionaryTest
     @Test
     void isWord_NOT_PRESENT()
     {
-        Dictionary sd = new Dictionary();
+        Words sd = new Words();
 
         assertFalse(sd.isWord("hapy"));
     }
@@ -41,7 +41,7 @@ class DictionaryTest
     @Test
     void getDefinition_HAPPY()
     {
-        Dictionary sd = new Dictionary();
+        Words sd = new Words();
 
         assertEquals("marked by joy [adj -PIER, -PIEST] : HAPPILY [adv]", sd.getDefinition("HAPPY"));
     }
@@ -49,21 +49,21 @@ class DictionaryTest
     @Test
     void getDefinition_ZOOGEOGRAPHICAL()
     {
-        Dictionary sd = new Dictionary();
+        Words sd = new Words();
 
         assertEquals("", sd.getDefinition("zoogeographical"));
     }
     @Test
     void getDefinition_FRAGMENT()
     {
-        Dictionary sd = new Dictionary();
+        Words sd = new Words();
 
         assertNull(sd.getDefinition("happ"));
     }
     @Test
     void getDefinition_NOT_PRESENT()
     {
-        Dictionary sd = new Dictionary();
+        Words sd = new Words();
 
         assertNull(sd.getDefinition("hapy"));
     }

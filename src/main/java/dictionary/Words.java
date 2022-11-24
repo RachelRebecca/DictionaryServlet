@@ -1,14 +1,15 @@
 package dictionary;
 
 import java.io.File;
+import java.util.List;
 import java.util.Scanner;
 import java.util.HashMap;
 
-public class Dictionary
+public class Words
 {
     private final HashMap<String, String> words = new HashMap<>();
 
-    public Dictionary()
+    public Words()
     {
         File file = new File("dictionary.txt");
         try
@@ -31,6 +32,22 @@ public class Dictionary
         catch (Exception e)
         {
             e.printStackTrace();
+        }
+    }
+
+    public Words(List<String> lines)
+    {
+        for (int i = 0; i < lines.size(); i++)
+        {
+            String[] entry = lines.get(i).split("\\s+", 2);
+            if (entry.length == 1)
+            {
+                words.put(entry[0], "");
+            }
+            else
+            {
+                words.put(entry[0], entry[1]);
+            }
         }
     }
 
