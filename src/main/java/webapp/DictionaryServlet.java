@@ -28,9 +28,6 @@ public class DictionaryServlet extends HttpServlet
     {
         // http://localhost:8080/DictionaryServlet-1.0-SNAPSHOT/dictionary?word=happy
         String word = req.getParameter("word");
-
-        getServletContext().getResource("/dictionary.txt");
-
         // List<String> lines = FileUtils.readLines(new File("dictionary.txt"));
         // Words words = new Words(lines);
         Words words = new Words();

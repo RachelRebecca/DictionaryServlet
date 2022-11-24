@@ -1,6 +1,8 @@
 package dictionary;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
@@ -11,10 +13,9 @@ public class Words
 
     public Words()
     {
-        File file = new File("dictionary.txt");
-        try
+        try (InputStream inputStream = Words.class.getResourceAsStream("/dictionary.txt");)
         {
-            Scanner scanner = new Scanner(file);
+            Scanner scanner = new Scanner(inputStream);
             while (scanner.hasNextLine())
             {
                 String line = scanner.nextLine();
@@ -29,7 +30,7 @@ public class Words
             }
         } catch (Exception e)
         {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 
