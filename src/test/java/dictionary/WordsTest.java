@@ -7,14 +7,14 @@ import static org.junit.jupiter.api.Assertions.*;
 class WordsTest
 {
     @Test
-    void isWord_HAPPY()
+    void isWord_Happy()
     {
         Words sd = new Words();
 
         assertTrue(sd.isWord("HAPPY"));
     }
     @Test
-    void isWord_ZOOGEOGRAPHICAL()
+    void isWord_Zoogeographical()
     {
         Words sd = new Words();
 
@@ -22,7 +22,7 @@ class WordsTest
     }
 
     @Test
-    void isWord_FRAGMENT()
+    void isWord_Fragment()
     {
         Words sd = new Words();
 
@@ -30,7 +30,7 @@ class WordsTest
     }
 
     @Test
-    void isWord_NOT_PRESENT()
+    void isWord_NotPresent()
     {
         Words sd = new Words();
 
@@ -39,7 +39,7 @@ class WordsTest
 
 
     @Test
-    void getDefinition_HAPPY()
+    void getDefinition_Happy()
     {
         Words sd = new Words();
 
@@ -47,21 +47,21 @@ class WordsTest
     }
 
     @Test
-    void getDefinition_ZOOGEOGRAPHICAL()
+    void getDefinition_Zoogeographical()
     {
         Words sd = new Words();
 
         assertEquals("", sd.getDefinition("zoogeographical"));
     }
     @Test
-    void getDefinition_FRAGMENT()
+    void getDefinition_Fragment()
     {
         Words sd = new Words();
 
         assertNull(sd.getDefinition("happ"));
     }
     @Test
-    void getDefinition_NOT_PRESENT()
+    void getDefinition_NotFragment()
     {
         Words sd = new Words();
 
