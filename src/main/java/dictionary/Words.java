@@ -1,10 +1,7 @@
 package dictionary;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Scanner;
 
 public class Words
@@ -31,21 +28,6 @@ public class Words
         } catch (Exception e)
         {
             throw new RuntimeException(e);
-        }
-    }
-
-    public Words(List<String> lines)
-    {
-        for (int i = 0; i < lines.size(); i++)
-        {
-            String[] entry = lines.get(i).split("\\s+", 2);
-            if (entry.length == 1)
-            {
-                words.put(entry[0], "");
-            } else
-            {
-                words.put(entry[0], entry[1]);
-            }
         }
     }
 

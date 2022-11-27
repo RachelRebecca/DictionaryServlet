@@ -2,17 +2,11 @@ package webapp;
 
 import com.google.gson.Gson;
 import dictionary.Words;
-import org.apache.commons.io.FileUtils;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.net.URL;
-import java.util.Dictionary;
-import java.util.List;
 
 public class DictionaryServlet extends HttpServlet
 {
@@ -28,8 +22,6 @@ public class DictionaryServlet extends HttpServlet
     {
         // http://localhost:8080/DictionaryServlet-1.0-SNAPSHOT/dictionary?word=happy
         String word = req.getParameter("word");
-        // List<String> lines = FileUtils.readLines(new File("dictionary.txt"));
-        // Words words = new Words(lines);
         Words words = new Words();
 
         String definition = words.getDefinition(word) == null
