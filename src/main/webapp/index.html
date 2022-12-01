@@ -2,8 +2,37 @@
 <html>
 <head>
     <title>Servlet Welcome Page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(() =>
+        {
+            $('#lookupWord').click(() =>
+            {
+                $.ajax({
+                    url: "dictionary",
+                    type: "GET",
+                    data: {
+                        word: $("#word").val()
+                    },
+                    success: function (result)
+                    {
+                        $("#definition").val(result)
+                    },
+                    error: function (error)
+                    {
+                        console.log(error);
+                    }
+                })
+            })
+        });
+    </script>
 </head>
 <body>
-    Welcome to the Dictionary Servlet web application!
+Welcome to the Dictionary Servlet web application!
+<br/>
+<input name="word" id="word" type="text">
+<input name="lookupWord" id="lookupWord" type="button" value="submit">
+<input name="definition" id="definition" type="text">
+
 </body>
 </html>
